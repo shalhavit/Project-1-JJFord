@@ -1,4 +1,4 @@
-var scrollTotal = 2000;
+var scrollTotal = 1000;
 var scrolled = 0; // A variable to keep track of how far we've scrolled.
 var fractionScrolled = scrolled / scrollTotal;
 
@@ -15,6 +15,7 @@ for (i = 0; i < waypoints.length; i++) {
 	// https://developer.mozilla.org/en-US/docs/Web/Reference/Events/click
 	waypoints[i].addEventListener("click", waypointClickHandler, false);
 }
+
 
 function updateWaypoints() {
 	fractionScrolled = scrolled / scrollTotal;
@@ -61,3 +62,4 @@ function MouseWheelHandler(e) {
 	
 	updateWaypoints();
 }
+

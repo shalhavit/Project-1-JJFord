@@ -15,18 +15,15 @@ body {
 
 header, footer {
 	background-color: #FFA500;
-
 	height: 64px;
-
 	line-height: 64px; /* By making the line-height as tall as the header, we vertically center the text */
-
-	color: #EEE;
+	color: #1047A9;
 	font-family: "Bilbo";
-	font-size: 2em;
+	font-size: 2em ;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.35em;
-
+	font-weight: bold;
 	width: 100%;
 }
 
@@ -34,7 +31,7 @@ header, footer {
 main {
 	min-width: 960px;
 	height: calc(100% - 2*64px);
-	background-color: A8F000;
+	background-color: #C7007D;
 }
 
 #content {
@@ -46,9 +43,9 @@ main {
 video {
 	position: absolute;
 	top: calc(1.5 * 7.525% + 23.3% - (400px / 2));
-	left: calc(50% - 420px / 2);
+	left: calc(50% - 400px / 2);
 	height: 400px;
-	width: 420px;
+	width: 400px;
 }
 
 #detail {
@@ -90,19 +87,53 @@ http://codepen.io/chriscoyier/pen/lotjh */
 
 /* DETAIL PANELS */
 aside {
-	width: 120px;
+	width: 128px;
 	height: 30%;
 	position: absolute;
+	
 }
 
-.right {
+.right.top {
 	right: calc(50% - 320px / 2 - 128px * 1.5);
-	background-color: #555;
+	background-color: black;
+	-webkit-transition-property: background;
+  	transition-duration: 10s;
+  	transition-timing-function: linear;
+}
+.right.top:hover {
+  background-image:url('./image1.jpg');
+}
+.right.bottom {
+	right: calc(50% - 320px / 2 - 128px * 1.5);
+	background-color: black;
+	-webkit-transition-property: background;
+  	transition-duration: 10s;
+  	transition-timing-function: linear;
+}
+.right.bottom:hover {
+  background-image:url('./image2.jpg');
 }
 
-.left {
+
+.left.top{
 	left: calc(50% - 320px / 2 - 128px * 1.5);
-	background-color: #CCC;
+	background-color: black;
+	-webkit-transition-property: background;
+  	transition-duration: 10s;
+  	transition-timing-function: linear;
+}
+.left.top:hover {
+  background-image:url('./image3.jpg');
+}
+.left.bottom{
+	left: calc(50% - 320px / 2 - 128px * 1.5);
+	background-color: black;
+	-webkit-transition-property: background;
+  	transition-duration: 10s;
+  	transition-timing-function: linear;
+}
+.left.bottom:hover {
+  background-image:url('./image4.jpg');
 }
 
 .top {
@@ -133,9 +164,9 @@ nav ol {
 }
 
 nav ol li {
-	width: 100%;
+	width: 150%;
 	height: 10%;
-	background-color: black;
+	background-color: blue;
 	padding: 0;
 	margin: 0;
 }
@@ -146,10 +177,8 @@ nav ol li {
 
 li div {
 	background-color: #EEE;
-
-	position: relative;
+	position: auto;
 	top: 19px;
-
 	width: 16px;
 	height: 16px;
 
