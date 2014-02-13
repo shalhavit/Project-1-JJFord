@@ -14,10 +14,10 @@ body {
 }
 
 header, footer {
-	background-color: #FFA500;
+	background-color: #1047AA;
 	height: 64px;
 	line-height: 64px; /* By making the line-height as tall as the header, we vertically center the text */
-	color: #1047A9;
+	color: #A8F000;
 	font-family: "Bilbo";
 	font-size: 2em ;
 	text-align: center;
@@ -43,21 +43,29 @@ main {
 video {
 	position: absolute;
 	top: calc(1.5 * 7.525% + 23.3% - (400px / 2));
-	left: calc(50% - 400px / 2);
+	left: calc(50% - 500px / 2);
 	height: 400px;
-	width: 400px;
+	width: 500px;
 }
 
 #detail {
-	background-color: #AAA;
+	background-color: black;
 
 	position: absolute;
 	
 	height: 23.3%;
-	top: calc(100% - 23.3% - 7.525%);
+	top: calc(100% - 23% - 7.525%);
 
-	left: calc(50% - 320px / 2 - 128px * 1.5);
-	right: calc(50% - 320px / 2 - 128px * 1.5);
+	left: calc(50% - 300px / 2 - 230px * 1.5);
+	right: calc(50% - 300px / 2 - 230px * 1.5);
+	-webkit-transition-property: background;
+  	-webkit-transition-duration: 10s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
+#detail:hover{
+background-image:url('./text.jpg');
+z-index: 9999;
 }
 
 /* Clever trick to make a triangle with CSS:
@@ -87,53 +95,65 @@ http://codepen.io/chriscoyier/pen/lotjh */
 
 /* DETAIL PANELS */
 aside {
-	width: 128px;
+	width: 200px;
 	height: 30%;
 	position: absolute;
-	
+
 }
 
 .right.top {
-	right: calc(50% - 320px / 2 - 128px * 1.5);
+	right: calc(40% - 320px / 2 - 128px * 1.5);
 	background-color: black;
 	-webkit-transition-property: background;
-  	transition-duration: 10s;
-  	transition-timing-function: linear;
+	-moz-transition: opacity 20s; /* Firefox */
+    -webkit-transition: opacity 20s; /* Safari and Chrome */
+    -o-transition: opacity 20s; /* Opera */
+    transition: opacity 20s
+  	-webkit-transition-timing-function: ease-in-out;
 }
 .right.top:hover {
-  background-image:url('./image1.jpg');
+  background-image:url('./image1a.jpg');
+  z-index: 9999;
 }
 .right.bottom {
-	right: calc(50% - 320px / 2 - 128px * 1.5);
+	right: calc(40% - 320px / 2 - 128px * 1.5);
 	background-color: black;
 	-webkit-transition-property: background;
-  	transition-duration: 10s;
-  	transition-timing-function: linear;
+	-moz-transition: opacity 20s; /* Firefox */
+    -webkit-transition: opacity 20s; /* Safari and Chrome */
+    -o-transition: opacity 20s; /* Opera */
+    transition: opacity 20s
+  	-webkit-transition-timing-function: ease-in-out;
 }
 .right.bottom:hover {
-  background-image:url('./image2.jpg');
+  background-image:url('./image2a.jpg');
 }
-
 
 .left.top{
-	left: calc(50% - 320px / 2 - 128px * 1.5);
+	left: calc(40% - 320px / 2 - 128px * 1.5);
 	background-color: black;
 	-webkit-transition-property: background;
-  	transition-duration: 10s;
-  	transition-timing-function: linear;
-}
+	-moz-transition: opacity 20s; /* Firefox */
+    -webkit-transition: opacity 20s; /* Safari and Chrome */
+    -o-transition: opacity 20s; /* Opera */
+    transition: opacity 20s
+  	-webkit-transition-timing-function: ease-in-out;
+ }
 .left.top:hover {
-  background-image:url('./image3.jpg');
+  background-image:url('./image3a.jpg');
 }
 .left.bottom{
-	left: calc(50% - 320px / 2 - 128px * 1.5);
+	left: calc(40% - 320px / 2 - 128px * 1.5);
 	background-color: black;
 	-webkit-transition-property: background;
-  	transition-duration: 10s;
-  	transition-timing-function: linear;
+	-moz-transition: opacity 20s; /* Firefox */
+    -webkit-transition: opacity 20s; /* Safari and Chrome */
+    -o-transition: opacity 20s; /* Opera */
+    transition: opacity 20s
+  	-webkit-transition-timing-function: ease-in-out;
 }
 .left.bottom:hover {
-  background-image:url('./image4.jpg');
+  background-image:url('./image4a.jpg');
 }
 
 .top {
@@ -143,10 +163,6 @@ aside {
 .bottom {
 	top: calc(7.525% * 2 + 23.3%);
 }
-div aside:hover{
-	color:blue;
-}
-
 /* NAVBAR */
 nav {
 	float: right;
@@ -164,17 +180,16 @@ nav ol {
 }
 
 nav ol li {
-	width: 150%;
+	width: 100%;
 	height: 10%;
-	background-color: blue;
+	background-color: black;
 	padding: 0;
 	margin: 0;
 }
 
 .active-waypoint {
-	background-color: #C7007D;
+	background-color: #052A6E;
 }
-
 li div {
 	background-color: #EEE;
 	position: auto;
@@ -183,8 +198,31 @@ li div {
 	height: 16px;
 
 	margin-right: auto;
-	margin-left: auto;	
+	margin-left: auto;
+
+/*Transition*/
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	
+	/*Reflection*/
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
 }
+
+
 li div:hover{
-	background-color: blue;
+	opacity: 1;
+   
+   /*Reflection*/
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+ 
+   /*Glow*/
+  -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+  box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}  
+
+
+img:hover{
+	display: none;
 }

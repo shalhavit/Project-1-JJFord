@@ -44,7 +44,7 @@ function waypointClickHandler(e) {
 	console.log('cilck');
 	for (i = 0; i < waypoints.length; i++) {
 		if (waypoints[i] === this) {
-			scrolled = (i+1)*200;
+			scrolled = (i+1)*100;
 			updateWaypoints();
 			console.log(scrolled);
 		}
